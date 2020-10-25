@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <title>Inspire</title>
+</head>
+
+<body id="my-body">
+    <main class="container-fluid">
+        <div class="row p-2">
+            <div class="col-4 offset-4">
+                <div class="row">
+                    <div id="weather" class="col-12 mb-2 border-blur rounded shadow-lg bg-blur text-dark">
+                        <h1>Weather</h1>
+                    </div>
+                    <div class="col-12 mb-2 border-blur rounded shadow-lg bg-blur text-dark">
+                        <h4>To-do List</h4>
+                        <h5>Incomplete Tasks: <span id="task-count"></span></h5>
+                        <ul id="todo-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <form onsubmit="app.todoController.addTodo(event)">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="description" id="description"
+                            aria-describedby="helpId" placeholder="Enter To-do">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+
+    </main>
+    <footer class="container-fluid">
+        <div class="row text-center">
+            <div id="quote" class="col-12 text-center border-blur bg-blur-2 rounded text-light">
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
